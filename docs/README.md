@@ -4,23 +4,7 @@ Welcome to the **Developer Handbook** repository! This handbook is a collection 
 
 ## Table of Contents
 1. [What Do We Mean by "Practice"?](./sections/What_Practice.md)
-2. [Reading Software Source Code](./sections/Reading_Source_Code.md)
-3. [The Source Code](./sections/The_Source_Code.md)
-    - What is source code?
-    - Writing code for reviews
-4. [Code Reviews](./sections/Code_Reviews.md)
-5. [Clean Code Principles](./sections/Clean_Code.md)
-    - SOLID
-    - DRY
-    - KISS
-    - YAGNI
-    - The Boy Scout Rule
-6. [Coding Standards](./sections/Coding_Standards.md)
-    - Formatting and tools
-    - Comments and boilerplate code
-7. [Immutability in Code](./sections/Immutability.md)
-8. [Package Organization](./sections/Package_Organization.md)
-    - Package by Layer vs. Package by Feature
+2. ...
 
 ## About This Handbook
 
@@ -47,4 +31,4 @@ This repository is open-source under the [MIT License](./LICENSE.md).
 
 Happy coding! 🎉
 
-##### an html version of this file is available [HERE](https://gnespolino.github.io/devhandbook/docs/index.html)
+##### An html version of this file is available [HERE](https://gnespolino.github.io/devhandbook/docs/index.html)
