@@ -46,3 +46,5 @@ This repository is open-source under the [MIT License](./LICENSE.md).
 ---
 
 Happy coding! 🎉
+
+##### an html version of this file is available [HERE](https://gnespolino.github.io/devhandbook/docs/index.html)
