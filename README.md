@@ -41,7 +41,7 @@ Contributions are welcome! If you have suggestions, corrections, or additional t
 
 ## License
 
-This repository is open-source under the [MIT License](./LICENSE).
+This repository is open-source under the [MIT License](./LICENSE.md).
 
 ---
 
