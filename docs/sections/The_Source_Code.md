@@ -26,7 +26,6 @@ For these reasons, code should always be written with the expectation that it wi
 - Does it communicate my intent without requiring additional explanations?  
 
 Writing code with the reader in mind not only improves collaboration but also elevates the overall quality and maintainability of the project.
----
 
 ### Why Code Review Matters
 
