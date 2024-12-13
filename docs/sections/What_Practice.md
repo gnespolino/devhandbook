@@ -13,4 +13,10 @@ Practice ensures that actions become second nature. Just as a skilled driver no 
 
 ---
 
-[Back to Index](../../README.md) | [Next: Coming soon](https://github.com/gnespolino)
+[Back to Index](../../README.md) | [Next: The Source Code](./The_Source_Code.md)
+
+---
+## License
+This repository is open-source under the [MIT License](/LICENSE.md).
+Happy coding! 🎉
+##### An html version of this file is available [HERE](https://gnespolino.github.io/devhandbook/index.html)

@@ -4,7 +4,8 @@ Welcome to the **Developer Handbook** repository! This handbook is a collection 
 
 ## Table of Contents
 1. [What Do We Mean by "Practice"?](./docs/sections/What_Practice.md)
-2. ...
+2. [The Source Code](./docs/sections/The_Source_Code.md)
+3. ...
 
 ## About This Handbook
 
@@ -23,12 +24,8 @@ Software development is a craft that requires continuous learning and improvemen
 
 Contributions are welcome! If you have suggestions, corrections, or additional topics to propose, feel free to open an issue or submit a pull request.
 
-## License
-
-This repository is open-source under the [MIT License](./LICENSE.md).
-
 ---
-
+## License
+This repository is open-source under the [MIT License](/LICENSE.md).
 Happy coding! 🎉
-
 ##### An html version of this file is available [HERE](https://gnespolino.github.io/devhandbook/index.html)
