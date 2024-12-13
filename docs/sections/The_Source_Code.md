@@ -25,7 +25,7 @@ For these reasons, code should always be written with the expectation that it wi
 - Is this clear enough for someone unfamiliar with the project to follow?  
 - Does it communicate my intent without requiring additional explanations?  
 
-Writing code with the reader in mind not only improves collaboration but also elevates the overall quality and maintainability of the project.
+**Writing code with the reader in mind not only improves collaboration but also elevates the overall quality and maintainability of the project.**
 
 ### Why Code Review Matters
 
@@ -66,6 +66,7 @@ These principles remind us that great code reviews are not just about improving 
 > "Great teams build each other up, not tear each other down."
 
 ---
+
 [Prev: What Do We Mean by "Practice"](./What_Practice.md) | [Back to Index](../README.md) | [Next: Coming soon](https://github.com/gnespolino)
 
 ---
