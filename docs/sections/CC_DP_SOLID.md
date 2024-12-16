@@ -24,7 +24,7 @@ These principles help developers write code that is flexible, maintainable, and 
 
 ---
 
-[Prev: The Source Code](./The_Source_Code.md) | [Back to Index](../README.md) | [Next: Coming soon](https://github.com/gnespolino)
+[Prev: The Source Code](./The_Source_Code.md) | [Back to Index](../../README.md) | [Next: Coming soon](https://github.com/gnespolino)
 
 ---
 ## License
