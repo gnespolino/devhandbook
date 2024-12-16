@@ -2,6 +2,8 @@
 
 Welcome to the **Developer Handbook** repository! This handbook is a collection of best practices, principles, and guidelines aimed at improving the skills and efficiency of software developers, with a focus on Java backend development.
 
+While this content reflects my personal experience and insights gained throughout my career, it is important to note that the concepts expressed in this handbook are not entirely original. Instead, they are a curated collection of principles, practices, and formulations inspired by the work, teachings, and contributions of other experts in the field.
+
 ## Table of Contents
 1. [What Do We Mean by "Practice"?](./docs/sections/What_Practice.md)
 2. [The Source Code](./docs/sections/The_Source_Code.md)
