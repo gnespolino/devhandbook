@@ -67,7 +67,7 @@ These principles remind us that great code reviews are not just about improving 
 
 ---
 
-[Prev: What Do We Mean by "Practice"](./What_Practice.md) | [Back to Index](../README.md) | [Next: Coming soon](https://github.com/gnespolino)
+[Prev: What Do We Mean by "Practice"](./What_Practice.md) | [Back to Index](../README.md) | [Next: CC_DP_SOLID.md](./CC_DP_SOLID.md)
 
 ---
 ## License

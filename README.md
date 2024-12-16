@@ -5,7 +5,10 @@ Welcome to the **Developer Handbook** repository! This handbook is a collection 
 ## Table of Contents
 1. [What Do We Mean by "Practice"?](./docs/sections/What_Practice.md)
 2. [The Source Code](./docs/sections/The_Source_Code.md)
-3. ...
+3. Clean Code: Design principles
+- [SOLID](./docs/sections/CC_DP_SOLID.md)
+- ...
+4. ...
 
 ## About This Handbook
 
