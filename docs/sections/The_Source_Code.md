@@ -69,6 +69,8 @@ These principles remind us that great code reviews are not just about improving 
 
 [Prev: What Do We Mean by "Practice"](./What_Practice.md) | [Back to Index](../../README.md) | [Next: CC_DP_SOLID.md](./CC_DP_SOLID.md)
 
+![Visitors](https://api.visitorbadge.io/api/visitors?path=https%3A%2F%2Fgnespolino.github.io%2Fdevhandbook%2Fdocs%2Fsections%2FThe_Source_Code&label=VISITORS&countColor=%23263759)
+
 ---
 ## License
 This repository is open-source under the [MIT License](/LICENSE.md).

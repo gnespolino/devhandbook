@@ -29,6 +29,8 @@ Software development is a craft that requires continuous learning and improvemen
 
 Contributions are welcome! If you have suggestions, corrections, or additional topics to propose, feel free to open an issue or submit a pull request.
 
+![Visitors](https://api.visitorbadge.io/api/visitors?path=https%3A%2F%2Fgnespolino.github.io%2Fdevhandbook%2F&label=VISITORS&countColor=%23263759)
+
 ---
 ## License
 This repository is open-source under the [MIT License](/LICENSE.md).

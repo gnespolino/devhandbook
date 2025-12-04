@@ -1,0 +1,5 @@
+title: "Developer Handbook"
+description: "A collection of best practices for software developers."
+theme: jekyll-theme-architect
+google_analytics: G-DKTLQF90K1 # <--- INCOLLA QUI IL TUO ID (sostituisci G-XXXXXXXXXX)
+show_downloads: true

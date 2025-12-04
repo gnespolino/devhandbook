@@ -26,6 +26,8 @@ These principles help developers write code that is flexible, maintainable, and 
 
 [Prev: The Source Code](./The_Source_Code.md) | [Back to Index](../../README.md) | [Next: 7 Tips from Linus Torvalds](./Linus_Torvalds_Tips.md)
 
+![Visitors](https://api.visitorbadge.io/api/visitors?path=https%3A%2F%2Fgnespolino.github.io%2Fdevhandbook%2Fdocs%2Fsections%2FCC_DP_SOLID&label=VISITORS&countColor=%23263759)
+
 ---
 ## License
 This repository is open-source under the [MIT License](/LICENSE.md).

@@ -15,6 +15,8 @@ Practice ensures that actions become second nature. Just as a skilled driver no 
 
 [Back to Index](../../README.md) | [Next: The Source Code](./The_Source_Code.md)
 
+![Visitors](https://api.visitorbadge.io/api/visitors?path=https%3A%2F%2Fgnespolino.github.io%2Fdevhandbook%2Fdocs%2Fsections%2FWhat_Practice&label=VISITORS&countColor=%23263759)
+
 ---
 ## License
 This repository is open-source under the [MIT License](/LICENSE.md).

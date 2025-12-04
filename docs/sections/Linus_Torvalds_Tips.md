@@ -53,6 +53,8 @@ Large, monolithic commits are a black box. They obscure the history and intent o
 
 [Prev: Clean Code: Design Principles (SOLID)](./CC_DP_SOLID.md) | [Back to Index](../../README.md) | [Next: Coming soon](https://github.com/gnespolino)
 
+![Visitors](https://api.visitorbadge.io/api/visitors?path=https%3A%2F%2Fgnespolino.github.io%2Fdevhandbook%2Fdocs%2Fsections%2FLinus_Torvalds_Tips&label=VISITORS&countColor=%23263759)
+
 ---
 ## License
 This repository is open-source under the [MIT License](/LICENSE.md).
