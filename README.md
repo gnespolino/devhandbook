@@ -9,7 +9,7 @@ While this content reflects my personal experience and insights gained throughou
 2. [The Source Code](./docs/sections/The_Source_Code.md)
 3. Clean Code: Design principles
 - [SOLID](./docs/sections/CC_DP_SOLID.md)
-- ...
+- [7 Tips from Linus Torvalds](./docs/sections/Linus_Torvalds_Tips.md)
 4. ...
 
 ## About This Handbook
