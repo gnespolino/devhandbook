@@ -38,7 +38,7 @@ The earlier you find a bug, the cheaper it is to fix.
 
 ---
 
-[Prev: Linux for Developers](./Linux_For_Developers.md) | [Back to Index](../../README.md) | [Next: Coming soon](https://github.com/gnespolino)
+[Prev: Linux for Developers](./Linux_For_Developers.md) | [Back to Index](../../README.md) | [Next: Event-Driven Architecture](./Event_Driven_Architecture.md)
 
 ![Visitors](https://api.visitorbadge.io/api/visitors?path=https%3A%2F%2Fgnespolino.github.io%2Fdevhandbook%2Fdocs%2Fsections%2FCI_CD_Pipeline&label=VISITORS&countColor=%23263759)
 

@@ -57,6 +57,11 @@ The foundational rules that govern high-quality software.
 *   [Linux for Developers: Power at Your Fingertips](./docs/sections/Linux_For_Developers.md)
 *   [CI/CD: The Safety Net](./docs/sections/CI_CD_Pipeline.md)
 
+### 5. Advanced Topics
+*   [Event-Driven Architecture](./docs/sections/Event_Driven_Architecture.md)
+*   [Database Patterns: PostgreSQL in Production](./docs/sections/Database_Patterns.md)
+*   [API Design: Building APIs That Don't Suck](./docs/sections/API_Design.md)
+
 ---
 
 ## Contributing
