@@ -8,9 +8,13 @@
 
 ### The Setup
 
-I run a desktop machine with an Intel Killer Wi-Fi 6E AX1675x card. I wanted to use it as a Wi-Fi access point — a real one, bridged to a dedicated ethernet port, managed by `hostapd`. I'd already had this working on 2.4 GHz. The goal seemed simple: move it to 5 GHz for better throughput.
+The actual problem I was solving: I needed Wi-Fi coverage in my home office. Ethernet cable: yes. Wi-Fi signal from the router in the other room: barely enough for a laptop, not enough for a phone. So my phone kept falling back to mobile data. A 2.4 GHz access point fixed it immediately — `hostapd`, a bridged ethernet port, done in 20 minutes.
 
-What followed was about four hours of pain.
+Then I noticed 5 GHz wasn't working. I didn't *need* 5 GHz. But I wanted to understand why it didn't work. That question cost me four hours.
+
+This article is about those four hours. It's not a tutorial — the 2.4 GHz solution was already good enough. It's about curiosity, and about pushing something that was deliberately designed not to work in this way until it did.
+
+I run a desktop machine with an Intel Killer Wi-Fi 6E AX1675x card, managed by `hostapd`, bridged to a dedicated ethernet port. 2.4 GHz was already working. The goal was to understand why 5 GHz wasn't — and fix it.
 
 ---
 
@@ -262,3 +266,4 @@ The collaboration pattern that worked: I ran commands and posted raw output; the
 *   Virtual interfaces are your friend when working around firmware constraints tied to primary interface state.
 *   `obss_interval=0` is underdocumented but important for multi-interface setups on single-phy cards.
 *   Never hardcode phy numbers.
+
