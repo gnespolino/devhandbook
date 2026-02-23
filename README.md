@@ -62,6 +62,10 @@ The foundational rules that govern high-quality software.
 *   [Database Patterns: PostgreSQL in Production](./docs/sections/Database_Patterns.md)
 *   [API Design: Building APIs That Don't Suck](./docs/sections/API_Design.md)
 
+### 6. Varie
+*Detours from software — systems, hardware, and the occasional rabbit hole.*
+*   [How I Tricked Intel's Firmware into 5 GHz Wi-Fi AP](./docs/sections/Intel_5GHz_AP.md)
+
 ---
 
 ## Contributing
