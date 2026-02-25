@@ -65,6 +65,7 @@ The foundational rules that govern high-quality software.
 ### 6. Varie
 *Detours from software — systems, hardware, and the occasional rabbit hole.*
 *   [How I Tricked Intel's Firmware into 5 GHz Wi-Fi AP](./docs/sections/Intel_5GHz_AP.md)
+*   [How I Reverse-Engineered My AC Units and Built a Control Hub in 27 Hours](./docs/sections/Climate_Hub.md)
 
 ---
 
