@@ -3,3 +3,6 @@ description: "A collection of best practices for software developers."
 theme: jekyll-theme-cayman
 google_analytics: G-DKTLQF90K1 # <--- INCOLLA QUI IL TUO ID (sostituisci G-XXXXXXXXXX)
 show_downloads: true
+kramdown:
+  smart_quotes: ["apos", "apos", "quot", "quot"]
+  input: GFM
