@@ -47,11 +47,17 @@ The solution was to decouple the frontend completely from the cloud. I implement
 
 ```mermaid
 graph TD
-    A["<b>Browser (vanilla JS)</b><br/>WebSocket ← push updates<br/>GET /devices ← from cache"]
-    B["<b>FastAPI + Uvicorn</b><br/>DeviceCoordinator<br/>├ In-memory device cache<br/>├ Per-device RefreshMgr<br/>└ CloudListener (WS)"]
-    C["<b>AUX Cloud API (China)</b><br/>AES-CBC encrypted payloads<br/>WebSocket push updates"]
-    A --> B
-    B -->|background only| C
+    A["Browser (vanilla JS)<br/>WebSocket + REST from cache"]
+    subgraph DeviceCoordinator
+        Cache["In-memory device cache"]
+        Refresh["Per-device RefreshMgr"]
+        Listener["CloudListener (WS)"]
+    end
+    C["AUX Cloud API (China)<br/>AES-CBC · WebSocket"]
+    A -->|reads from cache| Cache
+    Refresh -->|background poll| C
+    Listener -->|push updates| Cache
+    C -->|WebSocket events| Listener
 ```
 
 The rules are simple:
@@ -128,23 +134,31 @@ Worth noting what the AIs didn't do: the "temperature in tenths" insight was min
 ```mermaid
 graph TD
     subgraph Clients
-        W["<b>KDE Plasma Widget</b><br/>QML · polls REST API · native controls"]
-        D["<b>Web Dashboard</b><br/>Vanilla JS · WebSocket · real-time cards"]
-        CLI["<b>CLI (climate)</b><br/>Python · Textual TUI · direct commands"]
+        W["KDE Plasma Widget<br/>QML · native controls"]
+        D["Web Dashboard<br/>Vanilla JS · WebSocket"]
+        CLI["CLI<br/>Python · Textual TUI"]
     end
     subgraph Backend
-        F["<b>FastAPI Backend</b><br/>DeviceCoordinator (Digital Twin)<br/>├ In-memory cache (all devices)<br/>├ Per-device RefreshManager<br/>├ CloudListener (WebSocket)<br/>└ Exponential backoff + debouncing"]
+        F["FastAPI + Uvicorn"]
+        subgraph DeviceCoordinator2["DeviceCoordinator (Digital Twin)"]
+            Cache2["In-memory cache"]
+            Refresh2["Per-device RefreshManager"]
+            Listener2["CloudListener (WebSocket)"]
+            Backoff["Exponential backoff + debouncing"]
+        end
     end
     subgraph Cloud
-        API["<b>AC Freedom Cloud API</b><br/>AES-CBC encryption · SHA1/MD5 auth<br/>REST + WebSocket · temp in tenths (×10)"]
+        API["AC Freedom Cloud API<br/>AES-CBC · SHA1/MD5 auth<br/>temp in tenths x10"]
     end
     subgraph Hardware
-        AC["<b>5× Coolwell AC Units</b>"]
+        AC["5x Coolwell AC Units"]
     end
     W --> F
     D --> F
     CLI --> F
-    F --> API
+    F --> DeviceCoordinator2
+    Refresh2 --> API
+    Listener2 --> API
     API --> AC
 ```
 
