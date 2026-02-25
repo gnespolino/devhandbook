@@ -45,26 +45,13 @@ The first version had a problem: every time the frontend loaded the device list,
 
 The solution was to decouple the frontend completely from the cloud. I implemented what I call the **Digital Twin** pattern:
 
-```
-┌────────────────────────────────┐
-│  Browser (vanilla JS)          │
-│  WebSocket ← push updates      │
-│  GET /devices ← from cache     │
-└───────────────┬────────────────┘
-                ↓
-┌────────────────────────────────┐
-│  FastAPI + Uvicorn             │
-│  DeviceCoordinator             │
-│  ├── In-memory device cache    │
-│  ├── Per-device RefreshMgr     │
-│  └── CloudListener (WS)       │
-└───────────────┬────────────────┘
-                ↓ (background only)
-┌────────────────────────────────┐
-│  AUX Cloud API (China)         │
-│  AES-CBC encrypted payloads    │
-│  WebSocket push updates        │
-└────────────────────────────────┘
+```mermaid
+graph TD
+    A["<b>Browser (vanilla JS)</b><br/>WebSocket ← push updates<br/>GET /devices ← from cache"]
+    B["<b>FastAPI + Uvicorn</b><br/>DeviceCoordinator<br/>├ In-memory device cache<br/>├ Per-device RefreshMgr<br/>└ CloudListener (WS)"]
+    C["<b>AUX Cloud API (China)</b><br/>AES-CBC encrypted payloads<br/>WebSocket push updates"]
+    A --> B
+    B -->|background only| C
 ```
 
 The rules are simple:
@@ -138,30 +125,27 @@ Worth noting what the AIs didn't do: the "temperature in tenths" insight was min
 
 ### The Final Stack
 
-```
-┌────────────────────────────────────────────┐
-│  KDE Plasma Widget                         │
-│  QML · polls REST API · native controls    │
-├────────────────────────────────────────────┤
-│  Web Dashboard                             │
-│  Vanilla JS · WebSocket · real-time cards  │
-├────────────────────────────────────────────┤
-│  CLI (climate)                             │
-│  Python · Textual TUI · direct commands    │
-╠════════════════════════════════════════════╣
-│  FastAPI Backend                           │
-│  DeviceCoordinator (Digital Twin)          │
-│  ├── In-memory cache (all devices)         │
-│  ├── Per-device RefreshManager             │
-│  ├── CloudListener (WebSocket)             │
-│  └── Exponential backoff + debouncing      │
-╠════════════════════════════════════════════╣
-│  AC Freedom Cloud API                      │
-│  AES-CBC encryption · SHA1/MD5 auth        │
-│  REST + WebSocket · temp in tenths (×10)   │
-╠════════════════════════════════════════════╣
-│  5× Coolwell AC Units                     │
-└────────────────────────────────────────────┘
+```mermaid
+graph TD
+    subgraph Clients
+        W["<b>KDE Plasma Widget</b><br/>QML · polls REST API · native controls"]
+        D["<b>Web Dashboard</b><br/>Vanilla JS · WebSocket · real-time cards"]
+        CLI["<b>CLI (climate)</b><br/>Python · Textual TUI · direct commands"]
+    end
+    subgraph Backend
+        F["<b>FastAPI Backend</b><br/>DeviceCoordinator (Digital Twin)<br/>├ In-memory cache (all devices)<br/>├ Per-device RefreshManager<br/>├ CloudListener (WebSocket)<br/>└ Exponential backoff + debouncing"]
+    end
+    subgraph Cloud
+        API["<b>AC Freedom Cloud API</b><br/>AES-CBC encryption · SHA1/MD5 auth<br/>REST + WebSocket · temp in tenths (×10)"]
+    end
+    subgraph Hardware
+        AC["<b>5× Coolwell AC Units</b>"]
+    end
+    W --> F
+    D --> F
+    CLI --> F
+    F --> API
+    API --> AC
 ```
 
 Three interfaces (CLI, web, KDE widget), one backend, one cloud API. The backend is the single point of contact with the cloud — everything else reads from cache.
