@@ -46,25 +46,25 @@ The first version had a problem: every time the frontend loaded the device list,
 The solution was to decouple the frontend completely from the cloud. I implemented what I call the **Digital Twin** pattern:
 
 ```
-┌─────────────────────────────┐
-│    Browser (vanilla JS)      │
-│  WebSocket ← push updates   │
-│  GET /devices ← from cache  │
-└──────────────┬──────────────┘
-               ↓
-┌──────────────────────────────┐
-│      FastAPI + Uvicorn        │
-│  DeviceCoordinator            │
-│  ├── In-memory device cache   │
-│  ├── Per-device RefreshMgr    │
-│  └── CloudListener (WS)      │
-└──────────────┬───────────────┘
-               ↓ (background only)
-┌──────────────────────────────┐
-│    AUX Cloud API (China)      │
-│  AES-CBC encrypted payloads  │
-│  WebSocket push updates      │
-└──────────────────────────────┘
+┌────────────────────────────────┐
+│  Browser (vanilla JS)          │
+│  WebSocket ← push updates      │
+│  GET /devices ← from cache     │
+└───────────────┬────────────────┘
+                ↓
+┌────────────────────────────────┐
+│  FastAPI + Uvicorn             │
+│  DeviceCoordinator             │
+│  ├── In-memory device cache    │
+│  ├── Per-device RefreshMgr     │
+│  └── CloudListener (WS)       │
+└───────────────┬────────────────┘
+                ↓ (background only)
+┌────────────────────────────────┐
+│  AUX Cloud API (China)         │
+│  AES-CBC encrypted payloads    │
+│  WebSocket push updates        │
+└────────────────────────────────┘
 ```
 
 The rules are simple:
@@ -140,27 +140,27 @@ Worth noting what the AIs didn't do: the "temperature in tenths" insight was min
 
 ```
 ┌────────────────────────────────────────────┐
-│              KDE Plasma Widget              │
+│  KDE Plasma Widget                         │
 │  QML · polls REST API · native controls    │
 ├────────────────────────────────────────────┤
-│              Web Dashboard                  │
+│  Web Dashboard                             │
 │  Vanilla JS · WebSocket · real-time cards  │
 ├────────────────────────────────────────────┤
-│              CLI (climate)                  │
+│  CLI (climate)                             │
 │  Python · Textual TUI · direct commands    │
 ╠════════════════════════════════════════════╣
-│           FastAPI Backend                   │
+│  FastAPI Backend                           │
 │  DeviceCoordinator (Digital Twin)          │
 │  ├── In-memory cache (all devices)         │
 │  ├── Per-device RefreshManager             │
 │  ├── CloudListener (WebSocket)             │
 │  └── Exponential backoff + debouncing      │
 ╠════════════════════════════════════════════╣
-│           AC Freedom Cloud API              │
+│  AC Freedom Cloud API                      │
 │  AES-CBC encryption · SHA1/MD5 auth        │
 │  REST + WebSocket · temp in tenths (×10)   │
 ╠════════════════════════════════════════════╣
-│         5× Coolwell AC Units               │
+│  5× Coolwell AC Units                     │
 └────────────────────────────────────────────┘
 ```
 
