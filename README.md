@@ -11,11 +11,11 @@ Welcome to the **Developer Handbook**. This repository is a living collection of
 
 Hi, I'm **Giuseppe Nespolino**.
 
-I am a **Senior Software Engineer** and Backend Specialist based in Málaga, Spain. With over 15 years of experience in the field, I have architected and built scalable systems for industries ranging from Health Tech (Open Source) to Fintech and Gaming.
+I am a **Backend Engineer** with 18+ years of experience, based in Málaga, Spain. I build scalable, data-intensive systems — currently focused on **blockchain infrastructure** (Bitcoin risk analysis and crypto payment processing) at [Clovr Labs](https://www.clovrlabs.com/), and previously a core contributor to **[DHIS2](https://dhis2.org/)**, a health data platform used in 60+ countries, where I delivered **420+ merged PRs** over 4+ years.
 
-My career has been defined by a passion for **Clean Code**, **Open Source**, and **Linux** systems. I have contributed extensively to global projects like **DHIS2** (the world's largest health information system), optimized high-traffic betting platforms, and implemented blockchain analytics solutions.
+I integrate **AI-assisted development** tools into my daily workflow — using [Claude Code](https://claude.ai/code) with MCP integrations (GitHub, Slack, Linear, Notion) to accelerate architecture exploration, large-scale refactoring, and code quality at scale.
 
-I believe that software engineering is a craft. It requires not just technical knowledge of Java, Spring Boot, or Microservices, but a disciplined approach to simplicity, readability, and architectural integrity.
+My stack spans **Python** (FastAPI, Celery, Web3.py) and **Java** (Spring Boot, Hibernate), with deep experience in PostgreSQL, Kubernetes, Docker, and AWS.
 
 **Connect with me:**
 *   [LinkedIn](https://www.linkedin.com/in/gnespolino/)
@@ -25,7 +25,7 @@ I believe that software engineering is a craft. It requires not just technical k
 
 ## Why This Handbook?
 
-In my experience mentoring teams and leading technical projects, I've realized that the hardest part of software development isn't the syntax—it's the **mindset**.
+In 18+ years of building backend systems and mentoring teams, I've realized that the hardest part of software development isn't the syntax—it's the **mindset**.
 
 This handbook serves as:
 1.  **A Knowledge Base:** A reference for SOLID principles, Design Patterns, and Architecture.
